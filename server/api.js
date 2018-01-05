@@ -50,14 +50,15 @@ function getRouter() {
     return router;
 }
 
+var odStrategy = require('./shared/objet_detail_strategy');
 
 function getObjetDetails(req, res, next) {
     database.getPool().getConnection(function (err, connection) {
         if (err) return next(err);
+        var statement = odStrategy.operation(req);
+        console.log('Statement : ', statement);
         connection.execute(
-            'SELECT * ' +
-            'FROM FINANCE.AUDIT_JOURNALIER_OBJET_DETAIL ' +
-            'WHERE DIVISION = \'' + req.query.division + '\'',
+            statement,
             {}, //no binds
             {
                 outFormat: oracledb.OBJECT
@@ -84,7 +85,7 @@ function getDisqueDetails(req, res, next) {
     database.getPool().getConnection(function (err, connection) {
         if (err) return next(err);
         var statement = strategy.operation(req);
-            console.log(statement);
+        console.log(statement);
         connection.execute(
             statement,
             {}, //no binds
