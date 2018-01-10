@@ -6,20 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title ng-bind="pageTitle"></title>
     <link href="/vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-
     <link rel="stylesheet" href="/vendor/animate.css/animate.min.css" type="text/css" />
     <link rel="stylesheet" href="/vendor/glyphicons/glyphicons.css" type="text/css" />
     <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css" type="text/css" />
     <link rel="stylesheet" href="/vendor/material-design-icons/material-design-icons.css" type="text/css" />
     <link rel="stylesheet" href="/vendor/styles/app.css" type="text/css" />
     <link rel="stylesheet" href="/vendor/styles/font.css" type="text/css" />
-
 </head>
 
 <body>
     <div class="app">
         <audit></audit>        
     </div>
+    <!-- bower requires -->
     <script src="/vendor/socket.io-client/socket.io.js"></script>
     <script src="/assets/js/angular/angular1.6.9.js"></script>
     <script src="/vendor/angular-messages/angular-messages.js"></script>    
@@ -31,8 +30,9 @@
     <script src="/components/audit-detail/audit-detail.js"></script>
     <script src="/components/cache/cache.js"></script>
     <script src="/components/tab/tab.js"></script>
-
-    <script src="/shared/service.js"></script>
+    <script src="/components/tablespace/tablespace.js"></script>
+    <script src="/components/disk/disk.js"></script>
+    <script src="/components/table/table.js"></script>
+    <script src="/components/table-index/table-index.js"></script>
 </body>
-
 </html>
