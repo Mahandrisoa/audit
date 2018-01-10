@@ -56,9 +56,9 @@
  *****************************************************************************/
 
 module.exports = {
-    user: 'starfrx',
-    password: 'Frx1720',
-    connectString: '192.168.11.143:1521/us50',
+    user: 'system',
+    password: 'oracle',
+    connectString: 'localhost:1521/xe',
     poolMax: 44,
     poolMin: 2,
     poolIncrement: 5,

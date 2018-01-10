@@ -3,7 +3,7 @@ var util = require('./util.js');
 function operation(req) {
     var statement = 'SELECT ' +
         'TYPE_OBJET,NOM_OBJET,TAILLE_OBJET,NB_EXTENT,TAILLE_UTILISE,DATE_AUDIT_JOURNALIER,DIVISION ' +
-        'FROM FINANCE.AUDIT_JOURNALIER_OBJET_DETAIL ';
+        'FROM AUDIT_JOURNALIER_OBJET_DETAIL ';
     var owners = util.hasQueries(req, ["date", "division", "objet"]);
     switch (owners.predicates) {
         case 'date':

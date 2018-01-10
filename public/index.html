@@ -1,23 +1,38 @@
 <!DOCTYPE html>
-<html ng-app="realtimeOracle" ng-controller="appCtrl">
+<html ng-app="app" ng-controller="appCtrl">
+
 <head lang="en">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title ng-bind="pageTitle"></title>
     <link href="/vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/employees/employees.css" rel="stylesheet">
-    <link href="/employee-details/employee-details.css" rel="stylesheet">
-</head>
-<body>
-    <div ui-view="main"></div>
 
+    <link rel="stylesheet" href="/vendor/animate.css/animate.min.css" type="text/css" />
+    <link rel="stylesheet" href="/vendor/glyphicons/glyphicons.css" type="text/css" />
+    <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="/vendor/material-design-icons/material-design-icons.css" type="text/css" />
+    <link rel="stylesheet" href="/vendor/styles/app.css" type="text/css" />
+    <link rel="stylesheet" href="/vendor/styles/font.css" type="text/css" />
+
+</head>
+
+<body>
+    <div class="app">
+        <audit></audit>        
+    </div>
     <script src="/vendor/socket.io-client/socket.io.js"></script>
-    <script src="/vendor/angular/angular.js"></script>
-    <script src="/vendor/angular-messages/angular-messages.js"></script>
-    <script src="/vendor/ui-route/release/angular-ui-router.js"></script>
-    <script src="/app.js"></script>
-    <script src="/shared/util.js"></script>
-    <script src="/employees/employees.js"></script>
-    <script src="/employee-details/employee-details.js"></script>
+    <script src="/assets/js/angular/angular1.6.9.js"></script>
+    <script src="/vendor/angular-messages/angular-messages.js"></script>    
+    <script src="/vendor/angular-route/angular-route.js"></script>
+
+    <!-- call to all components -->
+    <script src="/scripts/app.js"></script>
+    <script src="/components/audit/audit.js"></script>
+    <script src="/components/audit-detail/audit-detail.js"></script>
+    <script src="/components/cache/cache.js"></script>
+    <script src="/components/tab/tab.js"></script>
+
+    <script src="/shared/service.js"></script>
 </body>
+
 </html>

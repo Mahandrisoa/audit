@@ -111,7 +111,7 @@ function getDisqueDetails(req, res, next) {
 function getAudits(req, res, next) {
     database.getPool().getConnection(function (err, connection) {
         if (err) return next(err);
-        var statement = 'SELECT * FROM FINANCE.AUDIT_JOURNALIER';
+        var statement = 'SELECT * FROM AUDIT_JOURNALIER';
         if (req.query.division === undefined && req.query.date !== undefined) {
             statement += ' WHERE DATE_AUDIT_JOURNALIER= TO_DATE(\'' + req.query.date + '\',\'dd-mm-yyyy\')';
         } else if (req.query.date === undefined && req.query.division !== undefined) {
